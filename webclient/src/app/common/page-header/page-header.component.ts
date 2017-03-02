@@ -10,7 +10,7 @@ export class PageHeaderComponent {
 
   public activePageTitle: string = 'FART';
   public routerLink: string = '/home';
-  public pageIcon: string = 'fa fa-chevron-circle-down'
+  public pageIcon: string = 'fa fa-chevron-circle-down';
 
   constructor() {
 

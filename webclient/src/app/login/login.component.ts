@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule, ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { User } from '../business/user';
 
@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(fb: FormBuilder, private userService: UserService, private router: Router) {
     this.form = fb.group({
-      email: ["", Validators.required],
-      password: ["", Validators.required]
+      email: ['', Validators.required],
+      password: ['', Validators.required]
     });
   }
   ngOnInit() {
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.message = 'Invalid login'
+    this.message = 'Invalid login';
 
   }
 }

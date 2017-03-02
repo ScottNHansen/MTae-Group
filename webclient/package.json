@@ -21,12 +21,10 @@
   },
   "keywords": [],
   "author": "",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
+  }],
   "dependencies": {
     "@angular/common": "2.4.8",
     "@angular/compiler": "2.4.8",
@@ -38,6 +36,8 @@
     "@angular/router": "3.4.8",
     "@angular/upgrade": "2.4.8",
     "core-js": "^2.4.1",
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
     "reflect-metadata": "^0.1.8",
     "systemjs": "0.19.40",
     "rxjs": "5.0.1",

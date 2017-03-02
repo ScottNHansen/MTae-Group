@@ -1,19 +1,10 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 
 import * as wijmo from 'wijmo/wijmo';
-import * as wjcGrid from 'wijmo/wijmo.grid';
-import * as wjcGrid2 from 'wijmo/wijmo.angular2.grid';
-import * as wjcXlsx from 'wijmo/wijmo.grid.xlsx';
 import * as wjcChart from 'wijmo/wijmo.chart';
 import * as wjcAnimation from 'wijmo/wijmo.chart.animation';
-// import { Dictionary } from 'typescript-collections';
-// import { WjGridModule } from 'wijmo/wijmo.angular2.grid';
-// import { WjCoreModule } from 'wijmo/wijmo.angular2.core';
-// import { WjChartModule } from 'wijmo/wijmo.angular2.chart';
-// import { WjChartAnimationModule } from 'wijmo/wijmo.angular2.chart.animation';
 import { DataService } from '../services/data.service';
 import { UserService } from '../services/user.service';
-import { SubscriptionActivityView } from '../business/subscription-activity-View';
 import { ActivitySummaryByMonth } from '../business/activitySummaryByMonth';
 import { PageHeaderComponent } from '../common/page-header/page-header.component';
 
@@ -62,20 +53,20 @@ export class DashBoardComponent implements OnInit, AfterViewInit {
     }
     ngAfterViewInit() {
         this.pageHeader.activePageTitle = 'Dashboard';
-        this.pageHeader.pageIcon = 'fa fa-chevron-circle-down'
+        this.pageHeader.pageIcon = 'fa fa-chevron-circle-down';
 
         this.chart.legend.position = wjcChart.Position.Bottom;
-        this.chart.header = 'Monthly Activity'
+        this.chart.header = 'Monthly Activity';
 
-        var s1 = new wjcChart.Series();
-        s1.name = 'Subscriptions'
+        let s1 = new wjcChart.Series();
+        s1.name = 'Subscriptions';
         s1.bindingX = 'Period';
         s1.binding = 'Subscriptions';
         s1.chartType = wjcChart.ChartType.Column;
         this.chart.series.push(s1);
 
-        var s2 = new wjcChart.Series();
-        s2.name = 'Redemptions'
+        let s2 = new wjcChart.Series();
+        s2.name = 'Redemptions';
         s2.bindingX = 'Period';
         s2.binding = 'Redemptions';
         this.chart.series.push(s2);

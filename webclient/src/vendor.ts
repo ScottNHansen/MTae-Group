@@ -28,4 +28,4 @@ import '../public/css/styles.css';
 
 // Wijmo css
 import '../third-party/wijmo/styles/wijmo.min.css';
-import '../third-party/wijmo/styles/themes/wijmo.theme.dark.css';
+// import '../third-party/wijmo/styles/themes/wijmo.theme.dark.css';

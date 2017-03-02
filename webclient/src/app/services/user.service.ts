@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 import { User } from '../business/user';
 
@@ -10,7 +10,7 @@ export class UserService {
     public user: User;
 
     public get isLoggedIn(): boolean {
-        return this._isLoggedIn
+        return this._isLoggedIn;
     }
     redirectURL: string;
 
@@ -25,10 +25,10 @@ export class UserService {
     }
     public logout(): boolean {
         this.user = null;
-        this._isLoggedIn=false;
+        this._isLoggedIn = false;
         return true;
     }
-    public checkCredentials():void {
+    public checkCredentials(): void {
         if (!this.isLoggedIn) {
             this.router.navigate(['login'])
         }

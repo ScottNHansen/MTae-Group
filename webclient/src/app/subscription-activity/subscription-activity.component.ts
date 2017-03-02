@@ -67,33 +67,30 @@ export class SubscriptionActivityComponent implements OnInit, AfterViewInit {
                 // console.log(this.activities[0]);
                 // console.log(this.data.items[0]);
             });
-
     }
-
 
     get filter(): string {
         return this._filter;
     }
     set filter(value: string) {
-        if (this._filter != value) {
+        if (this._filter !== value) {
             this._filter = value;
             this._applyFilter();
         }
     }
     // ICollectionView filter function
     private _filterFunction(item: any) {
-        var f = this.filter;
+        let f = this.filter;
         if (f && item) {
 
             // split string into terms to enable multi-field searches such as 'us gadget red'
-            var terms = f.toUpperCase().split(' ');
+            let terms = f.toUpperCase().split(' ');
 
             // look for any term in any string field
-            for (var i = 0; i < terms.length; i++) {
-                var termFound = false;
-                for (var key in item) {
-                    var value = item[key];
-                    if (wijmo.isString(value) && value.toUpperCase().indexOf(terms[i]) > -1) {
+            for (let i = 0; i < terms.length; i++) {
+                let termFound = false;
+                for (let key in item) {
+                    if (wijmo.isString(item[key]) && item[key].toUpperCase().indexOf(terms[i]) > -1) {
                         termFound = true;
                         break;
                     }
@@ -115,11 +112,11 @@ export class SubscriptionActivityComponent implements OnInit, AfterViewInit {
         if (this._toFilter) {
             clearTimeout(this._toFilter);
         }
-        var self = this;
+        let self = this;
         this._toFilter = setTimeout(function () {
             self._toFilter = null;
             if (self.flex) {
-                var cv = self.flex.collectionView;
+                let cv = self.flex.collectionView;
                 if (cv) {
                     if (cv.filter != self._thisFilterFunction) {
                         cv.filter = self._thisFilterFunction;

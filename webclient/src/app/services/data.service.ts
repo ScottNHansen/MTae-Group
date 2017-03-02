@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http'
+import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { RedemptionActivityView } from '../business/redemptionActivityView';
 import { SubscriptionActivityView } from '../business/subscription-activity-View';
@@ -10,13 +10,13 @@ import { InstrumentAnalytic, InstrumentAnalyticType } from '../business/instrume
 export class DataService {
 
     //private _url = 'http://192.168.10.180:50558/api'
-    private _url = 'http://localhost:50558/api'
+    private _url = 'http://localhost:50558/api';
 
     constructor(private http: Http) {
 
     }
     getSubscriptionActivities(): Observable<SubscriptionActivityView[]> {
-        console.log("DataService.getsubscriptionActivity");
+        console.log('DataService.getsubscriptionActivity');
         return this.http.get(this._url + '/activity/' + 'subscriptionactivity')
             .map((response: Response) => <SubscriptionActivityView[]>response.json()
                 .map((r: any) => {
@@ -46,12 +46,12 @@ export class DataService {
                     return activity;
 
                 }))
-            .catch(this.handleError)
+            .catch(this.handleError);
 
     }
 
     getRedemptionActivities(): Observable<RedemptionActivityView[]> {
-        console.log("DataService.getRedemptionActivity");
+        console.log('DataService.getRedemptionActivity');
         return this.http.get(this._url + '/activity/' + 'redemptionactivity')
             .map((response: Response) => <RedemptionActivityView[]>response.json()
                 .map((r: any) => {
@@ -65,7 +65,7 @@ export class DataService {
                     return activity;
 
                 }))
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
 
     getActivtySummaryByMonth(): Observable<ActivitySummaryByMonth[]> {
@@ -79,10 +79,10 @@ export class DataService {
                     return activitySummary;
 
                 }))
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
 
-    getInstrumentAnalytics(symbol:string,instrumentAnalyticType:InstrumentAnalyticType): Observable<InstrumentAnalytic[]> {
+    getInstrumentAnalytics(symbol: string, instrumentAnalyticType: InstrumentAnalyticType): Observable<InstrumentAnalytic[]> {
         return this.http.get(this._url + '/fundperformance/' + instrumentAnalyticType + '/' + symbol)
             .map((response: Response) => <InstrumentAnalytic[]>response.json()
                 .map((r: any) => {
@@ -94,11 +94,11 @@ export class DataService {
                     return instrumentAnalytic;
 
                 }))
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
 
     private handleError(err: any, caught: Observable<any[]>): Observable<any[]> {
-        console.log("DataService handleError");
+        console.log('DataService handleError');
         return null;
     }
 }

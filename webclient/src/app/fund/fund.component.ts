@@ -1,21 +1,11 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 
 import * as wijmo from 'wijmo/wijmo';
-import * as wjcGrid from 'wijmo/wijmo.grid';
-import * as wjcGrid2 from 'wijmo/wijmo.angular2.grid';
-import * as wjcXlsx from 'wijmo/wijmo.grid.xlsx';
 import * as wjcChart from 'wijmo/wijmo.chart';
 import * as wjcAnimation from 'wijmo/wijmo.chart.animation';
 
-// import { WjCoreModule } from 'wijmo/wijmo.angular2.core';
-// import { WjChartModule } from 'wijmo/wijmo.angular2.chart';
-// import { WjChartAnimationModule } from 'wijmo/wijmo.angular2.chart.animation';
-
 import { DataService } from '../services/data.service';
 import { UserService } from '../services/user.service';
-import { SubscriptionActivityView } from '../business/subscription-activity-View';
-import { ActivitySummaryByMonth } from '../business/activitySummaryByMonth';
-import { ChartSeries } from '../business/ChartSeries';
 import { InstrumentAnalytic, InstrumentAnalyticType } from '../business/instrumentAnalytic';
 import { Instrument } from '../business/instrument';
 import { PageHeaderComponent } from '../common/page-header/page-header.component';
@@ -136,7 +126,7 @@ export class FundComponent implements OnInit, AfterViewInit {
         s1.name = name;
         s1.bindingX = bindingX;
         s1.binding = binding;
-        s1.chartType = chartType
+        s1.chartType = chartType;
         chart.series.push(s1);
 
         return s1;
