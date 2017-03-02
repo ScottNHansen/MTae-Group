@@ -1,0 +1,142 @@
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font-familyx: 'Segoe UI Regular WestEuropean','Segoe UI',Tahoma,Arial,sans-serif;*/
+  padding-top: 70px;
+  font-size: 13px;
+  background-color: white;
+  margin: 0px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#content {
+  /*overflow-y: scroll;*/
+  overflow-y: hidden;
+  padding: 0px 10px 0px 10px !important;
+  margin-top: 70px !important;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  box-sizing: border-box;
+  height: calc(100vh - 150px);
+  width: calc(100vw - 20px);
+}
+
+.navbar-default {
+  border: 0px;
+  border-color: #6f8878;
+  background-color: #6f8878;
+  color: white;
+}
+
+.navbar-default .navbar-brand {
+  font-family: "SegoeUI-SemiLight-final", "Segoe UI SemiLight", "Segoe UI WPC Semilight", "Segoe UI", Segoe, Tahoma, Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-text {
+  color: #fff;
+  font-size: 13px;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+
+/*BootStrap*/
+
+.list-group .list-group-item {
+  border-radius: 0px;
+}
+
+.list-group .active {
+  background-color: #6f8878;
+}
+
+.list-group a:hover,
+.list-group a:focus {
+  background-color: #6f8878;
+  color: white;
+}
+
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+  background-color: #6f8878;
+}
+
+.btn {
+  border-radius: 0px;
+  background-color: #fff;
+  border: 1px solid #c9cbcd;
+  color: #5a5c62;
+  height: 28px;
+  padding: 2px;
+}
+
+.btn:focus,
+.btn:active:focus {
+  outline: 0 none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+  background: #6f8878;
+  box-shadow: none;
+}
+
+
+/* Navigation next to banner*/
+
+.main-nav-button,
+.main-nav-button:focus,
+.main-nav-button:active {
+  float: left;
+  height: 50px;
+  width: 50px;
+  border: 0px;
+  margin: 0px 20px 0px 0px;
+  background-color: black;
+  color: white;
+}
+
+.main-nav-button:hover {
+  background-color: dimgray;
+  color: white;
+}
+
+
+/* Download Button*/
+
+.download-button,
+.download-button:focus,
+.download-button:active {
+  height: 24px;
+  width: 24px;
+  margin: -4px 0px 0px 0px;
+  background-color: #fff;
+  border: 1px solid #c9cbcd;
+  color: #5a5c62;
+}
+
+.download-button:hover {
+  background: #6f8878;
+  box-shadow: none;
+}

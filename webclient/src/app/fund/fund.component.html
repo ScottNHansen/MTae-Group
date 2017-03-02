@@ -1,0 +1,26 @@
+<page-header #pageheader>
+</page-header>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="javascript:void(0)" class="list-group-item" [class.active]="isActiveRoute('Overview')" (click)="menuClick('Overview')">Overview</a>
+            <a href="javascript:void(0)" class="list-group-item" [class.active]="isActiveRoute('InvestmentGrowth')" (click)="menuClick('InvestmentGrowth')">Investment Growth of $100</a>
+            <a href="javascript:void(0)" class="list-group-item" [class.active]="isActiveRoute('TrailingReturns')" (click)="menuClick('TrailingReturns')">Trailing Returns</a>
+            <a href="javascript:void(0)" class="list-group-item" [class.active]="isActiveRoute('CalendarYearReturns')" (click)="menuClick('CalendarYearReturns')">Calendar Year Returns</a>
+            <a href="javascript:void(0)" class="list-group-item" [class.active]="isActiveRoute('DrawDown')" (click)="menuClick('DrawDown')">Draw Down</a>
+            <a href="javascript:void(0)" class="list-group-item" [class.active]="isActiveRoute('Rolling3YeearReturns')" (click)="menuClick('Rolling3YeearReturns')">Rolling 3 Year Returns</a>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="fund-title">{{instrument.Name}}</div>
+        <div>
+            <wj-flex-chart #chart style="display:block" class="chart" [itemsSource]="itemsSource">
+                <wj-flex-chart-animation #animation [easing]="easing" [duration]="duration"></wj-flex-chart-animation>
+            </wj-flex-chart>
+        </div>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+</div>

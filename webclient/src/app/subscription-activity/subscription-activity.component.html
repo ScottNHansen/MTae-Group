@@ -1,0 +1,56 @@
+<page-header #pageheader>
+</page-header>
+<div>
+	<div style="float:left">
+		<button class="btn btn-primary" type="button" (click)="refreshButtonClick()">
+                    <span>Refresh</span>
+					<span class="fa fa-refresh"></span>
+        </button>
+	</div>
+	<div style="float:right">
+		<input type="text" class="" placeholder="Filter" [(ngModel)]="filter" />
+		<button class="btn download-button" type="button" (click)="exportExcelClick()">
+					<span class="fa fa-file-excel-o"></span>
+        </button>
+	</div>
+</div>
+<wj-flex-grid #flex class='flex'>
+	<wj-flex-grid-column [binding]="'EffectiveDate'" [header]="'Effective'" [format]="'MM/dd/yyyy'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'ParentInvestorName'" [header]="'Parent Investor'" [align]="'left'" [width]="250">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'InvestorName'" [header]="'Investor'" [align]="'left'" [width]="500">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'FundShortName'" [header]="'Fund'" [align]="'left'" [width]="200">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'Activity'" [header]="'Activity'" [align]="'left'" [width]="150">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'Amount'" [header]="'Amount'" [align]="'right'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'WireDirect'" [header]="'Wire TD/Direct'" [align]="'center'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'AccountNumber'" [header]="'Account #'" [align]="'left'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'Notes'" [header]="'Notes'" [align]="'left'" [width]="200">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'SentToClient'" [header]="'Sent To Client'" [align]="'left'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'ReceivedFromClient'" [header]="'Recd from client'" [align]="'left'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'WireRequested'" [header]="'Wire Requested'" [align]="'center'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'FundsWired'" [header]="'Funds Wired'" [align]="'center'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'WireReceived'" [header]="'Wire Received'" [align]="'center'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'Sub'" [header]="'Sub'" [align]="'center'" [width]="50">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'Sub2x'" [header]="'Sub 2x'" [align]="'center'" [width]="50">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'StateOfResidence'" [header]="'Residence'" [align]="'center'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'VCMClients'" [header]="'VCM Clients'" [align]="'center'" [width]="75">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'BD'" [header]="'BD'" [align]="'center'" [width]="50">
+	</wj-flex-grid-column>
+</wj-flex-grid>

@@ -1,0 +1,30 @@
+<page-header #pageheader>
+</page-header>
+<div>
+	<div style="float:left">
+		<button class="btn btn-primary" type="button" (click)="refreshButtonClick()">
+                    <span>Refresh</span>
+					<span class="fa fa-refresh"></span>
+        </button>
+	</div>
+	<div style="float:right">
+		<input type="text" class="" placeholder="Filter" [(ngModel)]="filter" />
+		<button class="btn download-button" type="button" (click)="exportExcelClick()">
+					<span class="fa fa-file-excel-o"></span>
+        </button>
+	</div>
+</div>
+<wj-flex-grid #flex class='flex'>
+	<wj-flex-grid-column [binding]="'EffectiveDate'" [header]="'Effective'" [format]="'MM/dd/yyyy'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'DueDate'" [header]="'Due'" [format]="'MM/dd/yyyy'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'InvestorName'" [header]="'Investor'" [align]="'left'" [width]="500">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'FundShortName'" [header]="'Fund'" [align]="'left'" [width]="200">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [binding]="'Activity'" [header]="'Activity'" [align]="'left'" [width]="100">
+	</wj-flex-grid-column>
+	<wj-flex-grid-column [name]="'Amount'" [binding]="'Amount'" [header]="'Amount'" [align]="'right'" [width]="100">
+	</wj-flex-grid-column>
+</wj-flex-grid>
